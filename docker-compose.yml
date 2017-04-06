@@ -1,0 +1,22 @@
+version: "3"
+services:
+  api:
+    build: api
+    image: esaude-admin-api
+    networks:
+      - network
+    hostname: esaude-admin-api
+    container_name: esaude-admin-api
+    volumes:
+      - data:/opt/esaude/data
+  web:
+    build: web
+    image: esaude-admin-web
+    ports:
+      - "2581:80"
+    hostname: esaude-admin-web
+    container_name: esaude-admin-web
+networks:
+  network:
+volumes:
+  data:
