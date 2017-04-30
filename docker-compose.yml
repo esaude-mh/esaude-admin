@@ -3,10 +3,10 @@ services:
   api:
     build: api
     image: esaude-admin-api
-    networks:
-      - network
     hostname: esaude-admin-api
     container_name: esaude-admin-api
+    networks:
+      - network
     volumes:
       - data:/opt/esaude/data
   web:
@@ -16,6 +16,10 @@ services:
       - "2581:80"
     hostname: esaude-admin-web
     container_name: esaude-admin-web
+    networks:
+      - network
+    volumes:
+      - data:/opt/esaude/data
 networks:
   network:
 volumes:
