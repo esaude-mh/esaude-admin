@@ -1,8 +1,7 @@
 version: "3"
 services:
   api:
-    build: api
-    image: esaude-admin-api
+    image: esaude-docker-esaude-admin.bintray.io/esaude-admin-api:0.1.0-alpha1
     hostname: esaude-admin-api
     container_name: esaude-admin-api
     networks:
@@ -13,8 +12,7 @@ services:
       - data:/opt/esaude/data
       - /var/run/docker.sock:/var/run/docker.sock
   web:
-    build: web
-    image: esaude-admin-web
+    image: esaude-docker-esaude-admin.bintray.io/esaude-admin-web:0.1.0-alpha1
     hostname: esaude-admin-web
     container_name: esaude-admin-web
     networks:
