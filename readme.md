@@ -4,15 +4,16 @@
 
 # eSaude Admin App
 
-[![Build Status](https://img.shields.io/travis/esaude/esaude-admin/master.svg)](https://travis-ci.org/esaude/esaude-admin)
+[![Build Status](https://omrs-shields.psbrandt.io/custom/esaude/docs/blue?logo=esaude)](https://docs.esaude.org)
 [![eSaude Slack](https://slack.esaude.org/badge.svg)](https://slack.esaude.org)
 
 The eSaude admin application is an [Express](https://expressjs.com/) API and an
-[Angular 2](https://angular.io/) web application that work together to
+[Angular 4](https://angular.io/) web application that work together to
 provide functionality that can be used to administer the eSaude ecosystem of
 applications.
 
-For more information see [docs.esaude.org](https://docs.esaude.org).
+For more information see [docs.esaude.org](https://docs.esaude.org) or get in
+touch on [Slack](https://paper.dropbox.com/doc/eSaude-Communication-Tools-BVFLlm1LzQqqVoOXtEXwJ#:uid=29125003&h2=Slack).
 
 ## Install
 
@@ -23,9 +24,29 @@ $ wget https://get.esaude.org/app/esaude-app-admin.yml
 $ docker-compose -p esaude -f esaude-app-admin.yml up -d
 ```
 
+:pushpin: You will need need `v1.2.30+` of the [eSaude Platform](https://paper.dropbox.com/doc/eSaude-App-Install-Guide-Uvk5mTlgG2m0nyOYy5Zyg#:uid=496479570672974&h2=eSaude-EMR-Platform) running to use the admin app.
+
 ## Develop
 
-See the [API](api) and [web](web) readmes for details on how to contribute to
+This repository contains the API and web components as [git submodules](https://github.com/blog/2104-working-with-submodules). Since you will
+usually want to work on both components together, it makes sense to work from
+within this repository by checking out the code recursively:
+
+```
+git clone --recursive git@github.com:esaude/esaude-admin.git
+```
+
+If you need to update the submodule code, you can do so by running the following
+command in the root of the project:
+
+```
+git submodule update --init --recursive
+```
+
+:information_source: Note that changes made in the submodules will be pushed to
+their respective repositories when you run `git push` in their directories.
+
+See the [API](https://github.com/esaude/esaude-admin-api/blob/master/readme.md) and [web](https://github.com/esaude/esaude-admin-web/blob/master/readme.md) readmes for details on how to contribute to
 each component.
 
 ## License
