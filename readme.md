@@ -4,7 +4,7 @@
 
 # eSaude Admin App
 
-[![Build Status](https://omrs-shields.psbrandt.io/custom/esaude/docs/blue?logo=esaude)](https://docs.esaude.org)
+[![eSaude Docs](https://omrs-shields.psbrandt.io/custom/esaude/docs/blue?logo=esaude)](https://docs.esaude.org)
 [![eSaude Slack](https://slack.esaude.org/badge.svg)](https://slack.esaude.org)
 
 The eSaude admin application is an [Express](https://expressjs.com/) API and an
