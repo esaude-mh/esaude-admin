@@ -43,6 +43,13 @@ command in the root of the project:
 git submodule update --init --recursive
 ```
 
+Then, inside *each* submodule directory you need to tell git to track the `master`
+branch by running:
+
+```
+git checkout master
+```
+
 :information_source: Note that changes made in the submodules will be pushed to
 their respective repositories when you run `git push` in their directories.
 
